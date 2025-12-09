@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { Suspense, useState, useEffect } from "react"
 import { useSearchParams } from "next/navigation"
 import { Header } from "@/components/header"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -59,7 +59,7 @@ const BATCH_TYPES = {
   INTERNAL: "acp_foundation_compaction",
 } as const
 
-export default function BatchDetailsPage() {
+function BatchDetailsContent() {
   const searchParams = useSearchParams()
   const initialDatasetId = searchParams.get("datasetId") || ""
 
@@ -688,5 +688,22 @@ export default function BatchDetailsPage() {
         </Dialog>
       </main>
     </div>
+  )
+}
+
+export default function BatchDetailsPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-background">
+        <Header />
+        <main className="container mx-auto px-4 py-8">
+          <div className="flex items-center justify-center h-64">
+            <p className="text-muted-foreground">Loading...</p>
+          </div>
+        </main>
+      </div>
+    }>
+      <BatchDetailsContent />
+    </Suspense>
   )
 }

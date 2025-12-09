@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { Suspense, useState, useEffect } from "react"
 import { useSearchParams } from "next/navigation"
 import Link from "next/link"
 import { Header } from "@/components/header"
@@ -32,7 +32,7 @@ interface FlowData {
   flowRuns: any[]
 }
 
-export default function FlowDetailsPage() {
+function FlowDetailsContent() {
   const searchParams = useSearchParams()
   const initialFlowId = searchParams.get("flowId") || ""
 
@@ -543,5 +543,22 @@ export default function FlowDetailsPage() {
         </Dialog>
       </main>
     </div>
+  )
+}
+
+export default function FlowDetailsPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-background">
+        <Header />
+        <main className="container mx-auto px-4 py-8">
+          <div className="flex items-center justify-center h-64">
+            <p className="text-muted-foreground">Loading...</p>
+          </div>
+        </main>
+      </div>
+    }>
+      <FlowDetailsContent />
+    </Suspense>
   )
 }
