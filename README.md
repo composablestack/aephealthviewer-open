@@ -3,6 +3,7 @@
 *Adobe Experience Platform Monitoring and Analysis System*
 
 [![GitHub](https://img.shields.io/badge/GitHub-composablestack%2Faephealthviewer-blue?style=for-the-badge&logo=github)](https://github.com/composablestack/aephealthviewer-open)
+[![Code Wiki](https://img.shields.io/badge/Code%20Wiki-Evolution%20Documentation-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://codewiki.google/github.com/composablestack/aephealthviewer-open)
 [![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 
@@ -11,6 +12,18 @@
 The AEP Health Viewer is a monitoring system for Adobe Experience Platform (AEP) that provides real-time operational insights through direct API access. This open source version is designed for local deployment and provides core monitoring capabilities for understanding your AEP environment.
 
 > **Note**: This open source version provides basic monitoring through direct AEP API access. For advanced analytics, historical trend analysis, anomaly detection, database-backed insights, and enterprise support, [checkout ComposableStack.ai](https://composablestack.ai) and reach out to [info@composablestack.ai](mailto:info@composablestack.ai) to discuss tailored solutions for your organization.
+
+## 📖 Documentation & Code Evolution
+
+Explore the **[Google Code Wiki](https://codewiki.google/github.com/composablestack/aephealthviewer-open)** to understand how this codebase evolved over time. The Code Wiki provides:
+
+- **Development Timeline**: See the complete evolution of features and architectural decisions
+- **Code Changes**: Track how the codebase transformed from initial concept to production
+- **AI-Guided Development**: Learn how AI assistance accelerated the development process
+- **Best Practices**: Understand the patterns and principles applied throughout development
+- **Decision Rationale**: Discover why specific technical choices were made
+
+The Code Wiki serves as a living documentation of this project's journey, offering insights into modern AI-assisted development workflows and composable architecture patterns.
 
 ## Key Capabilities (Open Source Version)
 
